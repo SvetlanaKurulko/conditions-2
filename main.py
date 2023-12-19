@@ -1,49 +1,32 @@
-# Користувач вводить три цифри з клавіатури.
-# Залежно від вибору користувача програма виводить на екран максимум із трьох,
-# мінімум із трьох або середньоарифметичне трьох чисел.
-#
+
+# 1. Користувач вводить із клавіатури номер дня тижня (1-7).
+# Необхідно вивести на екран назви дня тижня.
+# Наприклад, якщо 1, на екрані напис понеділок, 2 — вівторок тощо.
+
+while True:
+    try:
+        print("1. Monday\n2. Tuesday\n3. Wednesday\n4. Thursday\n5. Friday\n6. Saturday"
+          "\n7. Sunday")
+        user_select = int(input("Enter menu number: "))
+        match user_select:
+            case 1:
+                 print ("Monday")
+            case 2:
+                 print("Tuesday")
+            case 3:
+                print("Wednesday")
+            case 4:
+                print("Thursday")
+            case 5:
+                print("Friday")
+            case 6:
+                print("Saturday")
+            case 7:
+                print("Sunday")
+            case _:
+                raise ValueError("Invalid value. Enter a number from 1 to 7.")
+
+    except Exception as e:
+                print(f"Error: {e}")
 
 
-# n1 = int(input("Enter first number: "))
-# n2 = int(input("Enter second number: "))
-# n3 = int(input("Enter third number: "))
-#
-# choice = int(input("Enter your choice (1/2/3): "))
-#
-# if choice == 1:
-#     maximum = max(n1, n2, n3)
-#     print("Maximum of the three numbers is:", maximum)
-# elif choice == 2:
-#     minimum = min(n1, n2, n3)
-#     print("Minimum of the three numbers is:", minimum)
-# elif choice == 3:
-#     average = (n1 + n2 + n3) / 3
-#     print("Average of the three numbers is:", average)
-# else:
-#     print("Invalid choice")
-
-#####
-
-# Користувач вводить з клавіатури кількість метрів.
-# Залежно від вибору користувача програма переводить метри милі, дюйми або ярди.
-
-# meters = float(input("Введіть кількість метрів: "))
-#
-# print("Оберіть одиницю виміру для переведення:")
-# print("1. Метри в милі")
-# print("2. Метри в дюйми")
-# print("3. Метри в ярди")
-#
-# choice = int(input("Ваш вибір (1/2/3): "))
-#
-# if choice == 1:
-#     miles = meters * 0.000621371
-#     print(f"{meters} метрів дорівнює {miles} миль")
-# elif choice == 2:
-#     inches = meters * 39.3701
-#     print(f"{meters} метрів дорівнює {inches} дюймів")
-# elif choice == 3:
-#     yards = meters * 1.09361
-#     print(f"{meters} метрів дорівнює {yards} ярдів")
-# else:
-#     print("Невірний вибір")

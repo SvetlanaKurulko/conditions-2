@@ -1,23 +1,33 @@
-# Користувач вводить три цифри з клавіатури.
-# Залежно від вибору користувача програма виводить на екран максимум із трьох,
-# мінімум із трьох або середньоарифметичне трьох чисел.
-#
+# 1. Користувач вводить із клавіатури номер дня тижня (1-7).
+# Необхідно вивести на екран назви дня тижня.
+# Наприклад, якщо 1, на екрані напис понеділок, 2 — вівторок тощо.
 
 
-# n1 = int(input("Enter first number: "))
-# n2 = int(input("Enter second number: "))
-# n3 = int(input("Enter third number: "))
-#
-# choice = int(input("Enter your choice (1/2/3): "))
-#
-# if choice == 1:
-#     maximum = max(n1, n2, n3)
-#     print("Maximum of the three numbers is:", maximum)
-# elif choice == 2:
-#     minimum = min(n1, n2, n3)
-#     print("Minimum of the three numbers is:", minimum)
-# elif choice == 3:
-#     average = (n1 + n2 + n3) / 3
-#     print("Average of the three numbers is:", average)
-# else:
-#     print("Invalid choice")
+while True:
+    try:
+        print("1. Monday\n2. Tuesday\n3. Wednesday\n4. Thursday\n5. Friday\n6. Saturday"
+          "\n7. Sunday")
+        user_select = int(input("Enter menu number: "))
+
+        match user_select:
+            case 1:
+                 print ("Monday")
+            case 2:
+                 print("Tuesday")
+            case 3:
+                print("Wednesday")
+            case 4:
+                print("Thursday")
+            case 5:
+                print("Friday")
+            case 6:
+                print("Saturday")
+            case 7:
+                print("Sunday")
+            case _:
+                raise ValueError("Invalid value. Enter a number from 1 to 7.")
+
+    except Exception as e:
+                print(f"Error: {e}")
+
+
